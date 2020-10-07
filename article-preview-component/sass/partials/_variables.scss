@@ -1,0 +1,31 @@
+$media-sm-max: 649px;
+$media-md-min: 650px;
+
+:root {
+  --color-headings: hsl(217, 19%, 35%);
+  --color-foreground: hsl(214, 17%, 51%);
+  --color-muted: hsl(212, 23%, 69%);
+  --color-background: hsl(210, 46%, 95%);
+  --color-shadow: hsla(217, 19%, 35%, 0.1);
+
+  --size-lateral-padding: 32px;
+  --size-border-radius: 10px;
+  --size-image-width: 39%;
+  --size-h1: 1rem;
+  --size-h1-line-height: 1.5;
+  --size-author-picture: 40px;
+  --size-button-and-icons: 32px;
+  --size-label-letter-spacing: 0.4em;
+  --size-social-icons: 20px;
+  --size-popup-arrow: 16px;
+  --size-popup-arrow-height: calc(var(--size-popup-arrow) / 4 * 3); // Approx
+  --size-popup-arrow-distance: 16px;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-lateral-padding: 40px;
+    --size-h1: 1.25rem;
+    --size-h1-line-height: 1.4;
+  }
+}
