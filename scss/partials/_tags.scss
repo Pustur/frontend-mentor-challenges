@@ -1,0 +1,18 @@
+$tags: (
+  'html': $color-html,
+  'css': $color-css,
+  'js': $color-js,
+  'api': $color-api,
+);
+
+.tag {
+  color: white;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+
+  @each $name, $color in $tags {
+    &-#{$name} {
+      background-color: $color;
+    }
+  }
+}

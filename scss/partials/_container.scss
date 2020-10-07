@@ -1,0 +1,14 @@
+.container {
+  max-width: 1024px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  > * {
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+}
