@@ -5,7 +5,9 @@
   "private": true,
   "author": "Loris Bettazza <loris.bettazza@gmail.com>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "test": "npm run format && npm run lint"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,6 @@
+{
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "ignore",
+  "singleQuote": true,
+  "trailingComma": "all"
+}
