@@ -1,0 +1,16 @@
+.icon {
+  width: var(--size-button-and-icons);
+  height: var(--size-button-and-icons);
+  overflow: hidden;
+  display: block;
+  text-indent: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--size-social-icons);
+
+  @each $social in 'facebook', 'twitter', 'pinterest' {
+    &-#{$social} {
+      background-image: url(../images/icon-#{$social}.svg);
+    }
+  }
+}

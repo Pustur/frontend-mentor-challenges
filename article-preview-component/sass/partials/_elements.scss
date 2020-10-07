@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  margin: 0;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  color: var(--color-headings);
+  font-size: var(--size-h1);
+  margin-bottom: 12px;
+  line-height: var(--size-h1-line-height);
+}
