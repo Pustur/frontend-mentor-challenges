@@ -1,0 +1,15 @@
+{
+  "name": "frontend-mentor-challenges",
+  "description": "Solutions for frontend challenges on frontendmentor.io",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Loris Bettazza <loris.bettazza@gmail.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pustur/frontend-mentor-challenges"
+  },
+  "license": "MIT"
+}
