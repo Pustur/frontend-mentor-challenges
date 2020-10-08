@@ -1,7 +1,7 @@
 .footer {
   margin-top: 4rem;
   padding: 2rem 0;
-  border-top: 1px solid $color-border;
+  border-top: 1px solid var(--color-borders);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -10,6 +10,6 @@
   a {
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: var(--color-footer-links);
   }
 }

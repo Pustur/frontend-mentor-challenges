@@ -1,8 +1,8 @@
 $tags: (
-  'html': $color-html,
-  'css': $color-css,
-  'js': $color-js,
-  'api': $color-api,
+  'html': var(--color-tag-html),
+  'css': var(--color-tag-css),
+  'js': var(--color-tag-js),
+  'api': var(--color-tag-api),
 );
 
 .tag {

@@ -7,9 +7,9 @@
 @mixin fancy-gradient {
   background-image: linear-gradient(
     to right,
-    $color-html,
-    $color-css,
-    $color-js,
-    $color-api
+    var(--color-tag-html),
+    var(--color-tag-css),
+    var(--color-tag-js),
+    var(--color-tag-api)
   );
 }
