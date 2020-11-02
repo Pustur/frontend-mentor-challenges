@@ -12,7 +12,9 @@ function submitFormHandler(e) {
 function invalidInputHandler(e) {
   const input = e.target;
   const id = input.getAttribute('id');
-  const errorLabel = input.closest('form').querySelector(`[for=${id}]`);
+  const errorLabel = input
+    .closest('form')
+    .querySelector(`.newsletter-form__error[for=${id}]`);
 
   e.preventDefault();
   errorLabel.textContent = input.validationMessage;
@@ -25,7 +27,9 @@ function changeInputHandler(e) {
   if (!input.validity.valid) return;
 
   const id = input.getAttribute('id');
-  const errorLabel = input.closest('form').querySelector(`[for=${id}]`);
+  const errorLabel = input
+    .closest('form')
+    .querySelector(`.newsletter-form__error[for=${id}]`);
 
   errorLabel.textContent = '';
   input.classList.remove('invalid');
