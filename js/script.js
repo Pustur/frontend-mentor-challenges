@@ -40,6 +40,13 @@ const projects = [
     description:
       'This challenge is great for beginners and offers a chance to practice basic client-side form validation.',
   },
+  {
+    name: 'Intro component with sign-up form',
+    slug: 'intro-component-with-signup-form',
+    tags: ['html', 'css', 'js'],
+    description:
+      'Practice building out a sign-up form complete with client-side validation using JavaScript.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
