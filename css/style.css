@@ -86,6 +86,8 @@ h1 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .projects-list__link, .projects-list__item-contents {
+    height: 100%; }
   .projects-list__link {
     display: block;
     color: inherit;
