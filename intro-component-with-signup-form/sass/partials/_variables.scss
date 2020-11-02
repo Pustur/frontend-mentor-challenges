@@ -1,0 +1,24 @@
+$media-sm-max: 749px;
+$media-md-min: 750px;
+
+:root {
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: rgb(56, 204, 140);
+  --color-green-muted: hsl(154, 64%, 68%);
+  --color-purple: hsl(248, 32%, 49%);
+  --color-purple-muted: hsl(246, 25%, 77%);
+  --color-foreground: hsl(249, 10%, 26%);
+  --color-placeholder: hsl(249, 10%, 48%);
+  --color-muted: hsl(0, 0%, 87%);
+
+  --size-border-radius: 8px;
+  --size-form-padding: 24px;
+  --size-form-input-padding: 1em;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-form-padding: 40px;
+    --size-form-input-padding: 2em;
+  }
+}

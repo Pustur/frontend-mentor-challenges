@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  background-color: var(--color-red);
+  background-image: url(../images/bg-intro-mobile.png);
+  color: white;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+small {
+  font-size: 100%;
+}
+
+@media (min-width: $media-md-min) {
+  html {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}

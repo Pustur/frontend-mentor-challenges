@@ -1,0 +1,101 @@
+.signup-form {
+  text-align: center;
+  color: var(--color-foreground);
+  background-color: white;
+  display: block;
+  padding: var(--size-form-padding);
+  border-radius: var(--size-border-radius);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+
+  &__field {
+    & + & {
+      margin-top: 16px;
+    }
+
+    > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__input,
+  &__button {
+    display: block;
+    width: 100%;
+    height: 56px;
+    border-radius: calc(var(--size-border-radius) / 2);
+    font-family: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  &__input {
+    border: 1px solid var(--color-muted);
+    padding: 0 var(--size-form-input-padding);
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    &::placeholder {
+      color: var(--color-placeholder);
+    }
+
+    &:focus {
+      border-color: var(--color-foreground);
+      outline: none;
+    }
+
+    &.invalid {
+      border: 2px solid var(--color-red);
+      color: var(--color-red);
+      background-image: url(../images/icon-error.svg);
+      background-repeat: no-repeat;
+      background-position: center right var(--size-form-input-padding);
+
+      &::placeholder {
+        color: currentColor;
+      }
+    }
+  }
+
+  &__button {
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+    color: white;
+    border: 0;
+    padding: 0 calc(var(--size-form-input-padding) / 2);
+    background-color: var(--color-green);
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-green-muted);
+      outline: none;
+    }
+  }
+
+  &__tos,
+  &__error {
+    font-size: 0.6875rem;
+  }
+
+  &__error {
+    display: block;
+    text-align: right;
+    color: var(--color-red);
+    margin-top: 0.5em;
+    font-weight: 500;
+    font-style: italic;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__tos {
+    color: var(--color-purple-muted);
+  }
+}

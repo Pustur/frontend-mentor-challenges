@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="intro">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+
+      <div class="form-container">
+        <p class="pricing">
+          <strong>Try it free 7 days</strong>
+          then $20/mo. thereafter
+        </p>
+
+        <form class="signup-form js-signup-form">
+          <div class="signup-form__field">
+            <label for="first" class="sr-only">First Name</label>
+            <input
+              id="first"
+              class="signup-form__input"
+              type="text"
+              placeholder="First Name"
+              required
+            />
+            <label for="first" class="signup-form__error"></label>
+          </div>
+          <div class="signup-form__field">
+            <label for="last" class="sr-only">Last Name</label>
+            <input
+              id="last"
+              class="signup-form__input"
+              type="text"
+              placeholder="Last Name"
+              required
+            />
+            <label for="last" class="signup-form__error"></label>
+          </div>
+          <div class="signup-form__field">
+            <label for="email" class="sr-only">Email Address</label>
+            <input
+              id="email"
+              class="signup-form__input"
+              type="email"
+              placeholder="Email Address"
+              required
+            />
+            <label for="email" class="signup-form__error"></label>
+          </div>
+          <div class="signup-form__field">
+            <label for="password" class="sr-only">Password</label>
+            <input
+              id="password"
+              class="signup-form__input"
+              type="password"
+              minlength="8"
+              placeholder="Password"
+              required
+            />
+            <label for="password" class="signup-form__error"></label>
+          </div>
+          <div class="signup-form__field">
+            <button class="signup-form__button" type="submit">
+              Claim your free trial
+            </button>
+            <p class="signup-form__tos">
+              <small>
+                By clicking the button, you are agreeing to our
+                <strong><a href="#">Terms and Services</a></strong>
+              </small>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
