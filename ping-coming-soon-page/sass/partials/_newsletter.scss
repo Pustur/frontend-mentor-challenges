@@ -21,6 +21,7 @@
 
     &::placeholder {
       color: var(--color-accent-muted);
+      opacity: 1;
     }
 
     &.invalid {

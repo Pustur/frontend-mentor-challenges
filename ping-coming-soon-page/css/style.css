@@ -98,7 +98,8 @@ h2 {
     appearance: none;
     border: 1px solid var(--color-accent-muted); }
     .newsletter-form__input::placeholder {
-      color: var(--color-accent-muted); }
+      color: var(--color-accent-muted);
+      opacity: 1; }
     .newsletter-form__input.invalid {
       border-color: var(--color-error); }
   .newsletter-form__error {

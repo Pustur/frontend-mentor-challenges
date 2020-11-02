@@ -13,12 +13,14 @@ $media-md-min: 750px;
 
   --size-border-radius: 8px;
   --size-form-padding: 24px;
+  --size-form-fields-gap: 16px;
   --size-form-input-padding: 1em;
 }
 
 @media (min-width: $media-md-min) {
   :root {
     --size-form-padding: 40px;
+    --size-form-fields-gap: 20px;
     --size-form-input-padding: 2em;
   }
 }

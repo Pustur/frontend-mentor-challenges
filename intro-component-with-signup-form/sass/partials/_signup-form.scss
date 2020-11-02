@@ -9,7 +9,7 @@
 
   &__field {
     & + & {
-      margin-top: 16px;
+      margin-top: var(--size-form-fields-gap);
     }
 
     > * {
@@ -38,6 +38,7 @@
 
     &::placeholder {
       color: var(--color-placeholder);
+      opacity: 1;
     }
 
     &:focus {
@@ -67,7 +68,7 @@
     transition: background-color 0.3s;
     text-transform: uppercase;
     font-size: inherit;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
 
     &:hover,
@@ -96,6 +97,7 @@
   }
 
   &__tos {
+    font-weight: 500;
     color: var(--color-purple-muted);
   }
 }
