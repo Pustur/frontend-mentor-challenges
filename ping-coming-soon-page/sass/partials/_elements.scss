@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Libre Franklin', sans-serif;
+  color: var(--color-foreground);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: var(--size-body-font);
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  color: var(--color-foreground);
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  color: var(--color-muted);
+  font-size: var(--size-h2-font);
+  font-weight: normal;
+}
+
+@media (min-width: $media-md-min) {
+  small {
+    font-size: 0.75rem;
+  }
+
+  h2 {
+    margin-bottom: -6px;
+  }
+}
