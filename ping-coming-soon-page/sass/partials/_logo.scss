@@ -1,0 +1,11 @@
+.logo {
+  display: initial;
+  margin-top: 86px;
+}
+
+@media (max-width: $media-sm-max) {
+  .logo {
+    width: 54px;
+    margin-bottom: 13px;
+  }
+}

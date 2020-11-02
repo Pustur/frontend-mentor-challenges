@@ -1,0 +1,26 @@
+.icon {
+  width: var(--size-social-icons-link);
+  height: var(--size-social-icons-link);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-accent-muted);
+  border-radius: 50%;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  svg {
+    width: 16px;
+    fill: var(--color-accent);
+    transition: fill 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+
+    svg {
+      fill: white;
+    }
+  }
+}

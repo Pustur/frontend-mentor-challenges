@@ -1,0 +1,18 @@
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  > * {
+    + * {
+      margin-left: 13px;
+    }
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .social-links {
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,38 @@
+$media-sm-max: 649px;
+$media-md-min: 650px;
+
+:root {
+  --color-foreground: hsl(209, 33%, 12%);
+  --color-muted: hsl(0, 0%, 59%);
+  --color-accent: hsl(223, 87%, 63%);
+  --color-accent-hover: hsl(223, 83%, 70%);
+  --color-accent-muted: hsl(223, 100%, 88%);
+  --color-error: hsl(354, 100%, 66%);
+
+  --size-body-font: 0.75rem;
+  --size-h2-font: 1.375rem;
+  --size-container-max-width: 695px;
+  --size-container-padding: 27.5px;
+  --size-form-margin-bottom: 68px;
+  --size-form-input-height: 40px;
+  --size-form-input-padding: 2rem;
+  --size-form-input-font: inherit;
+  --size-form-gap: 10px;
+  --size-social-icons-link: 32px;
+  --size-social-icons-logo: 16px;
+  --size-footer-margin-top: 120px;
+  --size-footer-padding-bottom: 23px;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-body-font: 1.25rem;
+    --size-h2-font: 3rem;
+    --size-form-margin-bottom: 88px;
+    --size-form-input-height: 56px;
+    --size-form-input-font: 1rem;
+    --size-form-gap: 16px;
+    --size-footer-margin-top: 70px;
+    --size-footer-padding-bottom: 33px;
+  }
+}

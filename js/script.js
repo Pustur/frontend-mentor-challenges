@@ -33,6 +33,13 @@ const projects = [
     description:
       "Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well.",
   },
+  {
+    name: 'Ping single column coming soon page',
+    slug: 'ping-coming-soon-page',
+    tags: ['html', 'css', 'js'],
+    description:
+      'This challenge is great for beginners and offers a chance to practice basic client-side form validation.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
