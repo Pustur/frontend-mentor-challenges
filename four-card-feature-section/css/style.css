@@ -54,6 +54,9 @@ img {
   display: block;
   max-width: 100%; }
 
+strong {
+  font-weight: bold; }
+
 a {
   text-decoration: none; }
 
