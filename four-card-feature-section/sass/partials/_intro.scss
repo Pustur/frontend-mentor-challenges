@@ -1,0 +1,20 @@
+.intro {
+  margin-bottom: var(--size-intro-margin-bottom);
+  text-align: center;
+
+  &__text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 36em;
+  }
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
