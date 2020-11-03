@@ -1,0 +1,26 @@
+$media-sm-max: 649px;
+$media-md-min: 650px;
+
+:root {
+  --color-peach: hsl(6, 100%, 80%);
+  --color-pink: hsl(335, 100%, 65%);
+  --color-gray: hsl(229, 7%, 55%);
+  --color-blue-muted: hsl(243, 100%, 93%);
+  --color-blue: hsl(228, 56%, 26%);
+  --color-blue-dark: hsl(229, 53%, 18%);
+  --color-blue-darkest: hsl(229, 57%, 11%);
+
+  --size-border-radius: 8px;
+  --size-body-font: 0.875rem;
+  --size-container-padding: 25px;
+  --size-container-max-width: 970px;
+  --size-button: 48px;
+  --size-info-container-padding: 32px;
+  --size-space-left-arrow: 20px;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-info-container-padding: 40px;
+  }
+}

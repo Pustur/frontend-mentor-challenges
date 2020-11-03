@@ -47,6 +47,13 @@ const projects = [
     description:
       'Practice building out a sign-up form complete with client-side validation using JavaScript.',
   },
+  {
+    name: 'Fylo data storage component',
+    slug: 'fylo-data-storage-component',
+    tags: ['html', 'css'],
+    description:
+      "This component has some interesting CSS challenges in the design. If you're looking to test your CSS skills, this will be a great project for you!",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');

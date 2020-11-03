@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+  color: var(--color-blue-muted);
+  box-sizing: border-box;
+  height: 100%;
+  background-color: var(--color-blue-darkest);
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-size: var(--size-body-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+progress {
+  &[value] {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::-webkit-progress-bar,
+    &::-webkit-progress-value {
+      border-radius: 99px;
+    }
+
+    &::-webkit-progress-bar {
+      background-color: var(--color-blue-dark);
+      padding: 3px;
+    }
+
+    &::-webkit-progress-value {
+      position: relative;
+      background-image: radial-gradient(
+          circle at calc(100% - 8px) center,
+          white 5px,
+          transparent 6px
+        ),
+        -webkit-linear-gradient(left, var(--color-peach), var(--color-pink));
+    }
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  html {
+    background-size: cover;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  html {
+    background-image: url(../images/bg-desktop.png);
+    background-position: bottom left;
+    background-size: 100vw 50vh;
+  }
+}

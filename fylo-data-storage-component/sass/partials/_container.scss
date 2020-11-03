@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  width: 100%;
+  max-width: var(--size-container-max-width);
+  padding: 0 var(--size-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: $media-sm-max) {
+  .container {
+    flex-direction: column;
+
+    > * {
+      + * {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .container {
+    align-items: flex-end;
+
+    > * {
+      + * {
+        margin-left: 30px;
+      }
+
+      &:first-child {
+        flex-grow: 2;
+      }
+
+      &:last-child {
+        flex-grow: 5;
+      }
+    }
+  }
+}
