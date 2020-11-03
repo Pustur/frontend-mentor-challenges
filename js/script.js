@@ -56,6 +56,13 @@ const projects = [
     description:
       "This component has some interesting CSS challenges in the design. If you're looking to test your CSS skills, this will be a great project for you!",
   },
+  {
+    name: 'Four card feature section',
+    slug: 'four-card-feature-section',
+    tags: ['html', 'css'],
+    description:
+      'A nice layout-based challenge for beginners. This will test anyone who is new to multi-column and responsive layouts.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');

@@ -1,0 +1,32 @@
+$media-sm-max: 749px;
+$media-md-min: 750px;
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-shadow: hsla(212, 86%, 44%, 0.2);
+  --color-gray-light: hsl(0, 0%, 98%);
+  --color-gray: hsl(229, 6%, 66%);
+  --color-gray-dark: hsl(234, 12%, 34%);
+
+  --size-body-line-height: 1.6;
+  --size-body-font: 0.9375rem;
+  --size-container-max-width: 1174px;
+  --size-container-padding: 32px;
+  --size-intro-margin-bottom: 78px;
+  --size-grid-gap: 24px;
+  --size-card-padding: 28px;
+  --size-card-image-padding-top: 20px;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-body-line-height: 1.8;
+    --size-intro-margin-bottom: 68px;
+    --size-grid-gap: 30px;
+    --size-card-padding: 32px;
+    --size-card-image-padding-top: 24px;
+  }
+}

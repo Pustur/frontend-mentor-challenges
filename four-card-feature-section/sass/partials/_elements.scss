@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-gray);
+  box-sizing: border-box;
+  background-color: var(--color-gray-light);
+}
+
+body {
+  margin: 0;
+  font-size: var(--size-body-font);
+  line-height: var(--size-body-line-height);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.4;
+  color: var(--color-gray-dark);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--color-gray-dark);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: $media-md-min) {
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0;
+  }
+}

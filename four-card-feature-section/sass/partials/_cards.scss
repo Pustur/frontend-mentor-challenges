@@ -1,0 +1,83 @@
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--size-grid-gap);
+
+  &__link {
+    color: inherit;
+    display: block;
+  }
+
+  &__card {
+    background-color: white;
+    padding: 22px var(--size-card-padding) var(--size-card-padding);
+    border-radius: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 16px 24px -8px var(--color-shadow);
+    border-top: 4px solid;
+
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @each $color in 'red', 'orange', 'blue', 'cyan' {
+      &--#{$color} {
+        border-color: var(--color-#{$color});
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 0.8125rem;
+    margin-top: 0.375rem;
+  }
+
+  &__image {
+    margin-left: auto;
+    padding-top: var(--size-card-image-padding-top);
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .cards {
+    &__image {
+      max-width: 56px;
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .cards {
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'a1 a2 a4'
+      'a1 a3 a4';
+
+    > * {
+      @each $i in 1, 2, 3, 4 {
+        &:nth-child(#{$i}) {
+          grid-area: unquote('a' + $i);
+        }
+      }
+    }
+
+    &__card {
+      transition: transform 0.3s;
+
+      a:hover &,
+      a:focus & {
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
