@@ -12,6 +12,8 @@ function projectToHtml({ name, slug, tags, description }) {
               class="projects-list__image"
               src="./${slug}/design/desktop-preview.jpg"
               alt="${name}"
+              width="900"
+              height="660"
             />
             <ul class="projects-list__tags">${tagsHtml}</ul>
           </div>

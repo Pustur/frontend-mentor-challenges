@@ -121,6 +121,7 @@ h1 {
   .projects-list__image-container {
     position: relative; }
   .projects-list__image {
+    height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
   .projects-list__tags {
