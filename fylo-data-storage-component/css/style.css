@@ -49,15 +49,23 @@ h1 {
 progress[value] {
   width: 100%;
   height: 20px;
+  border: 0;
+  background-color: var(--color-blue-dark);
   -webkit-appearance: none;
   appearance: none; }
-  progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value {
+
+@-moz-document url-prefix() {
+  progress[value] {
+    padding: 3px; } }
+  progress[value]::-moz-progress-bar {
+    border-radius: 99px;
+    background-image: radial-gradient(circle at calc(100% - 8px) center, white 5px, transparent 6px), -webkit-linear-gradient(left, var(--color-peach), var(--color-pink)); }
+  progress[value], progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value {
     border-radius: 99px; }
   progress[value]::-webkit-progress-bar {
     background-color: var(--color-blue-dark);
     padding: 3px; }
   progress[value]::-webkit-progress-value {
-    position: relative;
     background-image: radial-gradient(circle at calc(100% - 8px) center, white 5px, transparent 6px), -webkit-linear-gradient(left, var(--color-peach), var(--color-pink)); }
 
 @media (max-width: 649px) {

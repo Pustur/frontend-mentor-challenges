@@ -34,9 +34,28 @@ progress {
   &[value] {
     width: 100%;
     height: 20px;
+    border: 0;
+    background-color: var(--color-blue-dark);
     -webkit-appearance: none;
     appearance: none;
 
+    // Hack, target only firefox
+    // From: https://stackoverflow.com/questions/952861
+    @-moz-document url-prefix() {
+      padding: 3px;
+    }
+
+    &::-moz-progress-bar {
+      border-radius: 99px;
+      background-image: radial-gradient(
+          circle at calc(100% - 8px) center,
+          white 5px,
+          transparent 6px
+        ),
+        -webkit-linear-gradient(left, var(--color-peach), var(--color-pink));
+    }
+
+    &,
     &::-webkit-progress-bar,
     &::-webkit-progress-value {
       border-radius: 99px;
@@ -48,7 +67,6 @@ progress {
     }
 
     &::-webkit-progress-value {
-      position: relative;
       background-image: radial-gradient(
           circle at calc(100% - 8px) center,
           white 5px,
