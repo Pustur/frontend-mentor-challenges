@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  font-size: var(--size-body-font);
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-position: calc(50vw - var(--size-bg-pattern))
+      calc(50vh - var(--size-bg-pattern)),
+    calc(50vw) calc(50vh);
+}
+
+h1,
+strong {
+  color: var(--color-headings);
+}
+
+h1 {
+  margin: 0;
+  font-size: inherit;
+}
