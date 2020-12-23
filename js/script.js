@@ -63,6 +63,13 @@ const projects = [
     description:
       'A nice layout-based challenge for beginners. This will test anyone who is new to multi-column and responsive layouts.',
   },
+  {
+    name: 'Profile card component',
+    slug: 'profile-card-component',
+    tags: ['html', 'css'],
+    description:
+      "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');

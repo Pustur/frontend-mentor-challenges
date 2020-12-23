@@ -1,0 +1,84 @@
+:root {
+  --color-bg: hsl(185, 75%, 39%);
+  --color-headings: hsl(229, 23%, 23%);
+  --color-foreground: hsl(227, 10%, 46%);
+  --color-border: hsl(0, 0%, 91%);
+  --size-body-font: 1.125rem;
+  --size-bg-pattern: 978px; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  height: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 25px;
+  font-size: var(--size-body-font);
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-position: calc(50vw - var(--size-bg-pattern)) calc(50vh - var(--size-bg-pattern)), calc(50vw) calc(50vh); }
+
+h1,
+strong {
+  color: var(--color-headings); }
+
+h1 {
+  margin: 0;
+  font-size: inherit; }
+
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  background-image: url(../images/bg-pattern-card.svg);
+  max-width: 350px;
+  width: 100%;
+  padding-top: 140px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.4); }
+
+.profile {
+  background-color: white;
+  position: relative;
+  padding-top: 76px;
+  text-align: center; }
+  .profile__picture {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: 5px solid white; }
+  .profile__info > * {
+    display: inline-block; }
+    .profile__info > * + * {
+      margin-left: 4px; }
+  .profile__location {
+    font-size: 0.875rem;
+    margin-top: 11px; }
+  .profile__footer {
+    margin-top: 24px;
+    padding: 28px 0;
+    border-top: 1px solid var(--color-border); }
+  .profile__list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .profile__list > * {
+      min-width: 60px; }
+  .profile__category {
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    margin-top: 6px; }
