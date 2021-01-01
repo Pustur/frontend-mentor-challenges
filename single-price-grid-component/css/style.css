@@ -1,0 +1,124 @@
+:root {
+  --color-bg: hsl(204, 43%, 93%);
+  --color-bg-section-subscription: hsl(179, 62%, 43%);
+  --color-bg-section-why: hsl(179, 47%, 52%);
+  --color-accent: hsl(71, 73%, 54%);
+  --color-foreground: hsl(218, 22%, 67%); }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  height: 100%;
+  font-family: 'Karla', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 32px;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.01em; }
+
+h1 {
+  letter-spacing: -0.035em;
+  font-size: 21px;
+  color: var(--color-bg-section-subscription); }
+
+h2 {
+  font-size: 18px;
+  opacity: 0.9; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  opacity: 0.6; }
+  ul > li + li {
+    margin-top: 3px; }
+
+a {
+  text-decoration: none; }
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 25px; } }
+
+.monthly-price {
+  display: flex;
+  align-items: center; }
+  .monthly-price > * + * {
+    margin-left: 15px; }
+
+.price {
+  font-size: 2rem;
+  opacity: 0.9; }
+
+.muted {
+  opacity: 0.5; }
+
+.button {
+  display: block;
+  text-align: center;
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  padding: 14px;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem; }
+
+.main {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px 5px rgba(49, 102, 128, 0.2);
+  max-width: 635px; }
+
+@media (min-width: 700px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; } }
+
+.section {
+  padding: 24px; }
+  .section > *:first-child {
+    margin-top: 0; }
+  .section > *:last-child {
+    margin-bottom: 0; }
+  .section.join {
+    background-color: white; }
+    .section.join p {
+      font-size: 14px;
+      line-height: 1.85714; }
+    .section.join .highlight {
+      color: var(--color-accent);
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.33333; }
+  .section.subscription {
+    background-color: var(--color-bg-section-subscription);
+    color: white; }
+    .section.subscription p {
+      opacity: 0.7;
+      margin-top: 0.5rem; }
+  .section.why {
+    background-color: var(--color-bg-section-why);
+    color: white; }
+
+@media (min-width: 700px) {
+  .section {
+    padding: 40px; }
+    .section.join {
+      grid-column: 1 / -1; }
+      .section.join p {
+        font-size: 16px; }
+      .section.join .highlight {
+        font-size: 18px;
+        margin-bottom: -0.5rem; } }

@@ -1,0 +1,13 @@
+.main {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px 5px rgba(49, 102, 128, 0.2);
+  max-width: 635px;
+}
+
+@media (min-width: $media-md-min) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

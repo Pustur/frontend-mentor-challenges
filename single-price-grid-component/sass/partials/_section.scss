@@ -1,0 +1,63 @@
+.section {
+  padding: 24px;
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.join {
+    background-color: white;
+
+    p {
+      font-size: 14px;
+      line-height: (26 / 14);
+    }
+
+    .highlight {
+      color: var(--color-accent);
+      font-size: 15px;
+      font-weight: bold;
+      line-height: (20 / 15);
+    }
+  }
+
+  &.subscription {
+    background-color: var(--color-bg-section-subscription);
+    color: white;
+
+    p {
+      opacity: 0.7;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &.why {
+    background-color: var(--color-bg-section-why);
+    color: white;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .section {
+    padding: 40px;
+
+    &.join {
+      grid-column: 1 / -1;
+
+      p {
+        font-size: 16px;
+      }
+
+      .highlight {
+        font-size: 18px;
+        margin-bottom: -0.5rem;
+      }
+    }
+  }
+}
