@@ -1,0 +1,32 @@
+.monthly-price {
+  display: flex;
+  align-items: center;
+
+  > * {
+    + * {
+      margin-left: 15px;
+    }
+  }
+}
+
+.price {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.muted {
+  opacity: 0.5;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  padding: 14px;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}

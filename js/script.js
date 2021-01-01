@@ -70,6 +70,13 @@ const projects = [
     description:
       "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
   },
+  {
+    name: 'Single price grid component',
+    slug: 'single-price-grid-component',
+    tags: ['html', 'css'],
+    description:
+      'In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
