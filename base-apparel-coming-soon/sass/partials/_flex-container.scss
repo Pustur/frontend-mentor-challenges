@@ -1,0 +1,22 @@
+.flex-container {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+@media (min-width: $media-md-min) {
+  .flex-container {
+    min-height: 100%;
+    display: flex;
+
+    > * {
+      flex-grow: 1;
+
+      &:first-child {
+        flex: 0 0 (830 / 1440) * 100%;
+      }
+    }
+  }
+}

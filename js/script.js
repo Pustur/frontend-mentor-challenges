@@ -77,6 +77,13 @@ const projects = [
     description:
       'In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge.',
   },
+  {
+    name: 'Base Apparel coming soon page',
+    slug: 'base-apparel-coming-soon',
+    tags: ['html', 'css', 'js'],
+    description:
+      "This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation.",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');

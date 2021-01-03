@@ -1,0 +1,79 @@
+.signup-form {
+  display: block;
+  margin-top: 2rem;
+  position: relative;
+
+  &__input,
+  &__button {
+    display: block;
+    height: var(--size-input-height);
+    border-radius: 999px;
+    font-family: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid var(--color-pink);
+    padding-left: var(--size-input-padding);
+    padding-right: calc(
+      var(--size-button-width) + var(--size-input-padding-right)
+    );
+    font-size: var(--size-input-font);
+    background-color: transparent;
+    color: var(--color-pink);
+
+    &::placeholder {
+      color: var(--color-pink);
+      opacity: 0.5;
+    }
+
+    &.invalid {
+      border: 2px solid var(--color-tomato);
+      color: black;
+      padding-right: calc(
+        var(--size-button-width) + var(--size-input-padding-right) * 2 +
+          var(--size-input-error-icon-width)
+      );
+      background-image: url(../images/icon-error.svg);
+      background-repeat: no-repeat;
+      background-position: center right
+        calc(var(--size-button-width) + var(--size-input-padding-right));
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--size-button-width);
+    color: white;
+    border: 0;
+    text-indent: -999%;
+    box-shadow: 0 10px 20px 0 var(--color-pink-shadow);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/icon-arrow.svg),
+      linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    &:hover,
+    &:focus {
+      background-image: url(../images/icon-arrow.svg),
+        linear-gradient(135deg, hsl(0, 62%, 92%), hsl(0, 58%, 84%));
+    }
+  }
+
+  &__error {
+    display: block;
+    color: var(--color-pink);
+    margin: 6px var(--size-input-padding) 0;
+    font-size: 0.875rem;
+
+    &:empty {
+      display: none;
+    }
+  }
+}
