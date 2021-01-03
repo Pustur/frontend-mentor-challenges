@@ -91,6 +91,13 @@ const projects = [
     description:
       "This project will test your layout skills. If you're starting to get confident with Flexbox or Grid, this will provide a nice challenge!",
   },
+  {
+    name: 'FAQ accordion card',
+    slug: 'faq-accordion-card',
+    tags: ['html', 'css', 'js'],
+    description:
+      "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
