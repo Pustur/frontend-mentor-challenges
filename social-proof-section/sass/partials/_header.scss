@@ -1,0 +1,24 @@
+.header {
+  > * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-weight: 500;
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .header {
+    max-width: 32em;
+    padding-right: 32px;
+  }
+}
