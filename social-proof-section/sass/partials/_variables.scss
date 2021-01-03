@@ -1,0 +1,14 @@
+$media-sm-max: 1023px;
+$media-md-min: 1024px;
+
+:root {
+  --color-purple: hsl(300, 43%, 22%);
+  --color-pink: hsl(333, 80%, 67%);
+  --color-muted: hsl(303, 10%, 53%);
+  --color-notwhite: hsl(300, 24%, 96%);
+
+  --size-star-width: 17px;
+  --size-star-height: 16px;
+  --size-ratings-offset: 48px;
+  --size-reviews-offset: 16px;
+}

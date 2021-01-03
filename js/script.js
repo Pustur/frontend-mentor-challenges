@@ -84,6 +84,13 @@ const projects = [
     description:
       "This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation.",
   },
+  {
+    name: 'Social proof section',
+    slug: 'social-proof-section',
+    tags: ['html', 'css'],
+    description:
+      "This project will test your layout skills. If you're starting to get confident with Flexbox or Grid, this will provide a nice challenge!",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');

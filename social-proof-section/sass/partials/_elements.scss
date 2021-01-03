@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Spartan', sans-serif;
+  box-sizing: border-box;
+  color: var(--color-muted);
+}
+
+body {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: (25 / 15);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-image: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+}
+
+h1,
+p {
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-purple);
+  line-height: 1;
+  max-width: 10em;
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+}
+
+@media (max-width: $media-sm-max) {
+  body {
+    text-align: center;
+    background-size: auto, 100%;
+  }
+
+  h1 {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
