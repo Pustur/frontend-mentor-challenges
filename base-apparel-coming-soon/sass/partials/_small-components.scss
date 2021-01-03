@@ -1,0 +1,27 @@
+.main {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: $media-md-min) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    padding-right: ((55 / 830) / 1440 * 830) * 100%;
+    background-size: cover;
+    background-position: bottom left;
+    background-image: url(../images/bg-pattern-desktop.svg);
+  }
+
+  .header {
+    padding-top: 64px;
+    padding-bottom: 0;
+  }
+}

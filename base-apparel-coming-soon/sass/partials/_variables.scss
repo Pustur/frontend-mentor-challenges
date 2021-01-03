@@ -1,0 +1,29 @@
+$media-sm-max: 699px;
+$media-md-min: 700px;
+
+:root {
+  --color-pink: hsl(0, 36%, 70%);
+  --color-pink-shadow: hsla(0, 36%, 70%, 0.4);
+  --color-tomato: hsl(0, 93%, 68%);
+  --color-brown: hsl(0, 6%, 24%);
+
+  --size-arrow-width: 12px;
+  --size-input-height: 48px;
+  --size-input-padding: 24px;
+  --size-input-padding-right: 16px;
+  --size-input-font: 0.875rem;
+  --size-input-error-icon-width: 24px;
+  --size-button-padding: 26px;
+  --size-button-width: calc(
+    var(--size-button-padding) * 2 + var(--size-arrow-width)
+  );
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-input-height: 56px;
+    --size-input-padding: 32px;
+    --size-input-font: 1rem;
+    --size-button-padding: 44px;
+  }
+}

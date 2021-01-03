@@ -1,0 +1,16 @@
+.image {
+  background-size: cover;
+  background-position: 30% 50%;
+  background-image: url(../images/hero-desktop.jpg);
+}
+
+.image-mobile {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: $media-md-min) {
+  .image-mobile {
+    display: none;
+  }
+}
