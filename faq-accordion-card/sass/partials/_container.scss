@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  padding: 48px 24px;
+  max-width: 1008px;
+}
+
+@media (max-width: $media-sm-max) {
+  .container {
+    padding-top: calc(48px + var(--size-illustation-mobile-offset));
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .container {
+    padding-left: 64px;
+  }
+}

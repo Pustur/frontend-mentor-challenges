@@ -1,0 +1,85 @@
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    border-bottom: 1px solid var(--color-gray-light);
+
+    &--active {
+      .accordion__button {
+        font-weight: bold;
+      }
+
+      .accordion__text {
+        max-height: 4rem; // Magic number
+        margin-bottom: 1rem;
+        margin-top: -0.6em;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-right: calc(
+      var(--size-arrow-distance) * 2 + var(--size-arrow-width)
+    );
+    transition: max-height 0.3s, margin 0.3s;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 18px calc(var(--size-arrow-distance) * 2 + var(--size-arrow-width))
+      18px 0;
+    border: 0;
+    font-family: inherit;
+    font-size: 0.8125rem;
+    text-align: inherit;
+    background-color: transparent;
+    color: inherit;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--color-orange);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: var(--size-arrow-width);
+      height: var(--size-arrow-height);
+      position: absolute;
+      top: calc(50% - 4px);
+      right: var(--size-arrow-distance);
+      background-image: url(../images/icon-arrow-down.svg);
+      transition: transform 0.3s;
+
+      .accordion__item--active & {
+        transform: scaleY(-1);
+      }
+    }
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .accordion {
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .accordion {
+    &__button {
+      letter-spacing: 0.04em;
+    }
+  }
+}
