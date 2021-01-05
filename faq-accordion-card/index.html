@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card__images">
+          <img
+            class="card__image-box"
+            src="./images/illustration-box-desktop.svg"
+            alt=""
+          />
+          <img
+            class="card__illustration-mobile"
+            src="./images/illustration-woman-online-mobile.svg"
+            alt=""
+          />
+        </div>
+
+        <div>
+          <h1>FAQ</h1>
+
+          <ul class="accordion js-accordion">
+            <li class="accordion__item">
+              <h2 class="accordion__title">
+                <button class="accordion__button">
+                  How many team members can I invite?
+                </button>
+              </h2>
+              <p class="accordion__text">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </li>
+            <li class="accordion__item accordion__item--active">
+              <h2 class="accordion__title">
+                <button class="accordion__button">
+                  What is the maximum file upload size?
+                </button>
+              </h2>
+              <p class="accordion__text">
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </li>
+            <li class="accordion__item">
+              <h2 class="accordion__title">
+                <button class="accordion__button">
+                  How do I reset my password?
+                </button>
+              </h2>
+              <p class="accordion__text">
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page.
+                <br />
+                A reset link will be emailed to you.
+              </p>
+            </li>
+            <li class="accordion__item">
+              <h2 class="accordion__title">
+                <button class="accordion__button">
+                  Can I cancel my subscription?
+                </button>
+              </h2>
+              <p class="accordion__text">
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </li>
+            <li class="accordion__item">
+              <h2 class="accordion__title">
+                <button class="accordion__button">
+                  Do you provide additional support?
+                </button>
+              </h2>
+              <p class="accordion__text">
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
