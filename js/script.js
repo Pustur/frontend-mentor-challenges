@@ -98,6 +98,13 @@ const projects = [
     description:
       "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
   },
+  {
+    name: 'Huddle landing page with a single introductory section',
+    slug: 'huddle-landing-page-with-single-introductory-section',
+    tags: ['html', 'css'],
+    description:
+      'A perfect challenge for beginners, this project will get you working with a two column layout.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
