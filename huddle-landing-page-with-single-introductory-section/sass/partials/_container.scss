@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  padding: 0 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: $media-md-min) {
+  .container {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 1440px;
+
+    > * {
+      &:nth-child(2) {
+        flex: 0 0 auto;
+        margin: auto;
+      }
+    }
+  }
+}

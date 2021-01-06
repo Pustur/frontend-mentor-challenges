@@ -1,0 +1,22 @@
+.header {
+  padding: 38px 0;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 120px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .header {
+    padding: 50px 0;
+
+    &__logo {
+      max-width: 200px;
+    }
+  }
+}

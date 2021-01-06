@@ -1,0 +1,21 @@
+@media (max-width: $media-sm-max) {
+  .main {
+    &__text {
+      margin-top: 36px;
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .main {
+    display: grid;
+    grid-template-columns: 174fr 131fr;
+    gap: 60px;
+    padding-top: 40px;
+
+    &__illustration {
+      display: block;
+      width: 100%;
+    }
+  }
+}
