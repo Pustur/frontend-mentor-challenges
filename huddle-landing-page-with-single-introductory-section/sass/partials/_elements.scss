@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: white;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--color-purple);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(../images/bg-mobile.svg);
+  line-height: (24 / 17);
+  font-size: 1.0625rem;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.015em;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  opacity: 0.8;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: $media-sm-max) {
+  body {
+    text-align: center;
+  }
+
+  h2 {
+    max-width: 12em;
+    display: inline-block;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    line-height: (27 / 18);
+    font-size: 1.125rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.005em;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    letter-spacing: 0;
+  }
+}

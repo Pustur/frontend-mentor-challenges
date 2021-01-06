@@ -1,0 +1,10 @@
+.footer {
+  padding: 40px 0;
+}
+
+@media (min-width: $media-md-min) {
+  .footer {
+    text-align: right;
+    padding-top: 0;
+  }
+}
