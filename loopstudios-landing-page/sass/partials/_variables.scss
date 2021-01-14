@@ -1,0 +1,22 @@
+$media-sm-max: 799px;
+$media-md-min: 800px;
+$media-md-max: 1149px;
+$media-lg-min: 1150px;
+
+:root {
+  --color-foreground: hsl(0, 0%, 55%);
+  --color-border: hsl(0, 0%, 41%);
+
+  --size-container-padding: 24px;
+  --size-menu-toggle-padding: 1em;
+  --size-button-letter-spacing: 0.36em;
+  --size-button-padding: 1rem;
+  --size-creations-gap: 24px;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-button-letter-spacing: 0.3em;
+    --size-creations-gap: 30px;
+  }
+}

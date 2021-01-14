@@ -1,0 +1,33 @@
+.section-creations {
+  display: grid;
+}
+
+@media (max-width: $media-md-max) {
+  .section-creations {
+    gap: 32px;
+
+    > * {
+      &:last-child {
+        justify-self: center;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-lg-min) {
+  .section-creations {
+    grid-template-columns: auto min-content;
+    gap: 80px;
+
+    > * {
+      &:nth-child(2) {
+        grid-column: 1 / -1;
+        order: 1;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}

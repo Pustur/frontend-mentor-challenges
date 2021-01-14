@@ -1,0 +1,33 @@
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  font-family: 'Josefin Sans', serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  z-index: 5;
+
+  &__item {
+    & + & {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .menu-open & {
+    display: flex;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .menu-overlay {
+    display: none !important;
+  }
+}
