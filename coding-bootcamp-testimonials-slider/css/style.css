@@ -193,6 +193,7 @@ img {
   .quote__author-name, .quote__author-role {
     font-size: inherit; }
   .quote__author-name {
+    font-weight: bold;
     margin: 0; }
   .quote__author-role {
     color: var(--color-muted); }
