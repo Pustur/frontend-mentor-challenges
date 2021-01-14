@@ -4,6 +4,8 @@
     "browser": true
   },
   "rules": {
+    "no-use-before-define": ["error", { "variables": false }],
+    "no-param-reassign": ["error", { "props": false }],
     "no-alert": "off"
   }
 }
