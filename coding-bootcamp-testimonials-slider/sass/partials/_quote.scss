@@ -1,0 +1,65 @@
+.quote {
+  background-image: url(../images/pattern-quotes.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding-top: 0.6em;
+
+  &__text {
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    &::before {
+      content: '“';
+    }
+
+    &::after {
+      content: '”';
+    }
+  }
+
+  &__author {
+    font-style: normal;
+  }
+
+  &__author-name,
+  &__author-role {
+    font-size: inherit;
+  }
+
+  &__author-name {
+    margin: 0;
+  }
+
+  &__author-role {
+    color: var(--color-muted);
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .quote {
+    background-size: 60px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .quote {
+    background-position: top left 6rem;
+    padding-top: 1.6em;
+
+    &__text {
+      font-size: 2rem;
+    }
+
+    &__author {
+      display: flex;
+      padding-top: 8px;
+
+      > * {
+        + * {
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+}

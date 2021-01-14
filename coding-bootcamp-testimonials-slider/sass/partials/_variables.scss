@@ -1,0 +1,23 @@
+$media-sm-max: 949px;
+$media-md-min: 950px;
+$size-container-max-width: 600px;
+$size-container-max-width-md: 1190px;
+
+:root {
+  --color-foreground: hsl(240, 38%, 20%);
+  --color-muted: hsl(240, 18%, 77%);
+
+  --size-wrapper-padding: 2rem;
+  --size-container-padding: 24px;
+  --size-button: 40px;
+  --size-testimonial-image-container-padding: 38px;
+  --size-testimonial-image-width: 48.66%;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-wrapper-padding: 4rem;
+    --size-container-padding: 40px;
+    --size-button: 56px;
+  }
+}

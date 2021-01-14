@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  color: var(--color-foreground);
+  line-height: (24 / 18);
+}
+
+body {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: $media-sm-max) {
+  body {
+    text-align: center;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  body {
+    font-size: 1.25rem;
+    line-height: (44 / 32);
+  }
+}

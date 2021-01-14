@@ -105,6 +105,13 @@ const projects = [
     description:
       'A perfect challenge for beginners, this project will get you working with a two column layout.',
   },
+  {
+    name: 'Coding bootcamp testimonials slider',
+    slug: 'coding-bootcamp-testimonials-slider',
+    tags: ['html', 'css', 'js'],
+    description:
+      "This challenge will be a nice test if you're new to JavaScript. It's also a great opportunity to play around with content animations and transitions.",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
