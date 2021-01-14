@@ -1,0 +1,42 @@
+.menu {
+  &__toggle {
+    min-width: 24px;
+    padding: 0 var(--size-menu-toggle-padding);
+    margin-right: calc(var(--size-menu-toggle-padding) * -1);
+    box-sizing: content-box;
+    align-self: stretch;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/icon-hamburger.svg);
+
+    .menu-open & {
+      background-image: url(../images/icon-close.svg);
+    }
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .menu {
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    &__item {
+      & + & {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .menu {
+    display: flex;
+
+    &__item {
+      & + & {
+        margin-left: 34px;
+      }
+    }
+  }
+}

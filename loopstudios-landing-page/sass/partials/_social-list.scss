@@ -1,0 +1,14 @@
+.social-list {
+  display: inline-flex;
+  align-items: center;
+
+  > * {
+    + * {
+      margin-left: 16px;
+    }
+  }
+
+  a {
+    display: block;
+  }
+}

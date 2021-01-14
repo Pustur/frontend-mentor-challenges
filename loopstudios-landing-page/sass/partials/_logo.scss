@@ -1,0 +1,21 @@
+.logo {
+  width: auto;
+}
+
+@media (max-width: $media-sm-max) {
+  .logo {
+    max-width: 144px;
+
+    .footer & {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .logo {
+    .footer & {
+      max-width: 144px;
+    }
+  }
+}

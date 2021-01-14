@@ -1,0 +1,45 @@
+.header {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 10;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  .header-expanded & {
+    transform: translateY(30px);
+  }
+
+  .header-full & {
+    background-color: black;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .header {
+    &__nav {
+      display: block;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+    .header-expanded & {
+      transform: translateY(50px);
+    }
+  }
+}

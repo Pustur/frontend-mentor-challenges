@@ -1,0 +1,39 @@
+.hero {
+  height: 100vh;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../images/mobile/image-hero.jpg);
+
+  &__title {
+    color: white;
+    border: 1px solid currentColor;
+    padding: 1em;
+    margin: 0;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .hero {
+    margin-bottom: 160px;
+    max-height: 650px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../images/desktop/image-hero.jpg);
+
+    &__title {
+      width: 65%;
+      padding: 0.5em;
+      margin-top: 80px;
+    }
+  }
+}
+
+@media (min-width: $media-lg-min) {
+  .hero {
+    &__title {
+      width: (650 / 1114) * 100%;
+    }
+  }
+}

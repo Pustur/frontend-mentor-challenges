@@ -1,0 +1,29 @@
+@media (min-width: $media-md-min) {
+  .fancy-links {
+    a {
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 24px;
+        height: 2px;
+        background-color: currentColor;
+        transform: translate3d(-50%, 0, 0);
+        opacity: 0;
+        transition: transform 0.5s, opacity 0.3s;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          transform: translate3d(-50%, 8px, 0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.button {
+  font-size: 0.875rem;
+  height: 40px;
+  line-height: 36px;
+  letter-spacing: var(--size-button-letter-spacing);
+  padding-left: calc(
+    var(--size-button-padding) + var(--size-button-letter-spacing)
+  );
+  padding-right: var(--size-button-padding);
+  border: 1px solid black;
+  min-width: 160px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: white;
+    border-color: black;
+    background-color: black;
+  }
+}
+
+@media (min-width: $media-lg-min) {
+  .button {
+    font-size: 0.9375rem;
+    border-width: 2px;
+    border-color: var(--color-border);
+    border-radius: 2px;
+  }
+}
