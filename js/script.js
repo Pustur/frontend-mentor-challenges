@@ -112,6 +112,13 @@ const projects = [
     description:
       "This challenge will be a nice test if you're new to JavaScript. It's also a great opportunity to play around with content animations and transitions.",
   },
+  {
+    name: 'Loopstudios landing page',
+    slug: 'loopstudios-landing-page',
+    tags: ['html', 'css', 'js'],
+    description:
+      "This challenge is perfect if you're looking to test your CSS Grid chops. Even without Grid, this project will be a fun one to help you practice your layout skills!",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
