@@ -1,0 +1,53 @@
+.testimonial {
+  &__author {
+    display: flex;
+    align-items: center;
+
+    > * {
+      + * {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__info {
+    margin-top: -1px;
+  }
+
+  &__name {
+    font-size: inherit;
+    margin: 0;
+  }
+
+  &__title,
+  &__paragraph {
+    opacity: 0.5;
+  }
+
+  &__title {
+    font-size: 0.6875rem;
+    margin-top: -1px;
+  }
+
+  &__intro,
+  &__paragraph {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  &__intro {
+    font-size: 1.25rem;
+    line-height: (24 / 20);
+  }
+
+  &__paragraph {
+    padding-right: 2%;
+  }
+}
