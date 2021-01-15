@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  padding: 70px 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: $media-md-min) {
+  .container {
+    padding: 70px 24px 100px;
+    max-width: 1098px;
+  }
+}

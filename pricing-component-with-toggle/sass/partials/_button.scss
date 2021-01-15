@@ -1,0 +1,44 @@
+.button {
+  position: relative;
+  z-index: 0;
+  height: 44px;
+  line-height: 44px;
+  letter-spacing: 0.11em;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  color: white;
+  border: var(--size-button-boder-width) solid transparent;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+  &,
+  &::before {
+    display: block;
+    border-radius: 6px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--size-button-boder-width) * -1);
+    right: calc(var(--size-button-boder-width) * -1);
+    bottom: calc(var(--size-button-boder-width) * -1);
+    left: calc(var(--size-button-boder-width) * -1);
+    background-image: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    transition: opacity 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+    border-color: currentColor;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+}

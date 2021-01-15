@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-foreground);
+  background-color: var(--color-notwhite);
+  background-repeat: no-repeat;
+  background-position: calc(100% + (var(--size-bg-top-width) / 2)) 0%;
+  background-image: url(../images/bg-top.svg);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+h3 {
+  color: var(--color-foreground-dark);
+  letter-spacing: -0.03em;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  color: var(--color-muted);
+}
+
+@media (min-width: $media-md-min) {
+  body {
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-position: left bottom, right top;
+  }
+}
