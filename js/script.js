@@ -126,6 +126,13 @@ const projects = [
     description:
       "This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!",
   },
+  {
+    name: 'Pricing component with toggle',
+    slug: 'pricing-component-with-toggle',
+    tags: ['html', 'css', 'js'],
+    description:
+      'This challenge will get you thinking about building an accessible custom toggle control and also test your layout skills.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');
