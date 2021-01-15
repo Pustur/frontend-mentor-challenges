@@ -19,25 +19,25 @@
   <body>
     <main class="container">
       <h1>Our Pricing</h1>
-      <form class="toggle">
+      <div class="toggle">
         <input
           id="annually"
-          class="toggle__input sr-only"
-          name="payment-frequency"
-          type="radio"
           value="annually"
+          type="radio"
+          name="payment-frequency"
+          class="toggle__input sr-only"
         />
         <label class="toggle__label" for="annually">Annually</label>
         <input
           id="monthly"
-          class="toggle__input sr-only"
-          name="payment-frequency"
-          type="radio"
           value="monthly"
+          type="radio"
+          name="payment-frequency"
+          class="toggle__input sr-only"
           checked
         />
         <label class="toggle__label" for="monthly">Monthly</label>
-      </form>
+      </div>
 
       <div class="grid">
         <section class="price-card">
@@ -46,9 +46,7 @@
             <span class="price-card__dollar">$</span>
             19.99
           </h3>
-          <h3
-            class="price-card__price js-price-card__price price-card__price--hidden"
-          >
+          <h3 class="price-card__price js-price-card__price" hidden>
             <span class="price-card__dollar">$</span>
             199.99
           </h3>
@@ -66,9 +64,7 @@
             <span class="price-card__dollar">$</span>
             24.99
           </h3>
-          <h3
-            class="price-card__price js-price-card__price price-card__price--hidden"
-          >
+          <h3 class="price-card__price js-price-card__price" hidden>
             <span class="price-card__dollar">$</span>
             249.99
           </h3>
@@ -86,9 +82,7 @@
             <span class="price-card__dollar">$</span>
             39.99
           </h3>
-          <h3
-            class="price-card__price js-price-card__price price-card__price--hidden"
-          >
+          <h3 class="price-card__price js-price-card__price" hidden>
             <span class="price-card__dollar">$</span>
             399.99
           </h3>

@@ -1,8 +1,15 @@
-const prices = document.querySelectorAll('.js-price-card__price');
-const form = document.querySelector('form');
-
-form.addEventListener('change', () => {
+// Functions
+function inputChangeHandler() {
   prices.forEach(price => {
-    price.classList.toggle('price-card__price--hidden');
+    price.toggleAttribute('hidden');
   });
+}
+
+// DOM Elements
+const prices = document.querySelectorAll('.js-price-card__price');
+const inputs = document.querySelectorAll('input');
+
+// Events
+inputs.forEach(input => {
+  input.addEventListener('change', inputChangeHandler);
 });

@@ -171,8 +171,6 @@ form {
     margin: 0;
     display: inline-flex;
     align-items: center; }
-    .price-card__price--hidden {
-      display: none; }
   .price-card__dollar {
     font-size: 2.5rem;
     margin-right: 0.6rem; }
@@ -226,6 +224,9 @@ form {
     border-bottom-right-radius: var(--size-card-border-radius); }
   .price-card--highlighted {
     border-radius: var(--size-card-border-radius); } }
+
+[hidden] {
+  display: none !important; }
 
 .sr-only {
   position: absolute;
