@@ -1,0 +1,100 @@
+.toggle {
+  display: inline-flex;
+  margin-bottom: 80px;
+
+  &:focus-within {
+    .toggle__label {
+      &::before {
+        outline: 1px dotted #212121;
+        outline: 5px auto Highlight;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+
+  &__input {
+    &:first-of-type {
+      + .toggle__label {
+        padding-right: calc(
+          var(--size-toggle-width) + var(--size-toggle-label-padding)
+        );
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          border-radius: 99px;
+        }
+
+        &::before {
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: var(--size-toggle-width);
+          padding: var(--size-toggle-padding);
+          background-image: linear-gradient(
+            135deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%)
+          );
+        }
+
+        &::after {
+          top: var(--size-toggle-padding);
+          bottom: var(--size-toggle-padding);
+          right: var(--size-toggle-padding);
+          width: var(--size-toggle-thumb);
+          background-color: white;
+          transform: translateX(0);
+          transition: transform 0.3s;
+        }
+      }
+
+      &:checked {
+        + .toggle__label {
+          &::after {
+            transform: translateX(-100%);
+          }
+        }
+      }
+    }
+
+    &:last-of-type {
+      + .toggle__label {
+        padding-left: calc(
+          var(--size-toggle-width) + var(--size-toggle-label-padding)
+        );
+        margin-left: calc((var(--size-toggle-width)) * -1);
+      }
+    }
+
+    &:not(:checked) {
+      + .toggle__label {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding: 6px var(--size-toggle-label-padding) 7px;
+  }
+
+  &:hover {
+    .toggle__label {
+      &:first-of-type {
+        &::before {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .toggle {
+    margin-bottom: 64px;
+  }
+}

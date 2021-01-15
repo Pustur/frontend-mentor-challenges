@@ -1,0 +1,22 @@
+$media-sm-max: 1023px;
+$media-md-min: 1024px;
+
+:root {
+  --color-notwhite: hsl(240, 78%, 98%);
+  --color-muted: hsl(234, 14%, 74%);
+  --color-foreground: hsl(233, 13%, 49%);
+  --color-foreground-dark: hsl(232, 13%, 33%);
+  --color-accent: hsl(237, 63%, 64%);
+
+  --size-button-boder-width: 1px;
+  --size-bg-top-width: 375px;
+  --size-card-border-radius: 12px;
+  --size-card-padding: 30px;
+  --size-card-highlight-offset: 24px;
+  --size-toggle-thumb: 24px;
+  --size-toggle-padding: 4px;
+  --size-toggle-label-padding: 24px;
+  --size-toggle-width: calc(
+    var(--size-toggle-thumb) * 2 + var(--size-toggle-padding) * 2
+  );
+}

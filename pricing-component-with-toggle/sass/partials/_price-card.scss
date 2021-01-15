@@ -1,0 +1,121 @@
+.price-card {
+  background-color: white;
+  padding: var(--size-card-padding);
+  box-shadow: 0 16px 48px -24px rgba(0, 0, 0, 0.2);
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__name {
+    font-size: 1.125rem;
+    padding: 5px 0;
+  }
+
+  &__price {
+    font-size: 4.5rem;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__dollar {
+    font-size: 2.5rem;
+    margin-right: 0.6rem;
+  }
+
+  &__list {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+
+    > * {
+      position: relative;
+      padding: 17px 0;
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        opacity: 0.3;
+      }
+
+      &::before {
+        content: '';
+        top: 0;
+      }
+
+      &:last-child {
+        &::after {
+          content: '';
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--highlighted {
+    color: white;
+    background-image: linear-gradient(
+      135deg,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    padding: calc(var(--size-card-padding) + var(--size-card-highlight-offset))
+      var(--size-card-padding);
+
+    h3 {
+      color: inherit;
+    }
+
+    .button {
+      background-color: white;
+      background-image: none;
+      color: var(--color-accent);
+
+      &::before {
+        content: none;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .price-card {
+    border-radius: var(--size-card-border-radius);
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .price-card {
+    &:first-of-type {
+      border-top-left-radius: var(--size-card-border-radius);
+      border-bottom-left-radius: var(--size-card-border-radius);
+    }
+
+    &:last-of-type {
+      border-top-right-radius: var(--size-card-border-radius);
+      border-bottom-right-radius: var(--size-card-border-radius);
+    }
+
+    &--highlighted {
+      border-radius: var(--size-card-border-radius);
+    }
+  }
+}

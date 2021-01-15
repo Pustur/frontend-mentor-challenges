@@ -1,0 +1,20 @@
+@media (max-width: $media-sm-max) {
+  .grid {
+    > * {
+      + * {
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .grid {
+    display: flex;
+    align-items: center;
+
+    > * {
+      flex: 0 0 (100% / 3);
+    }
+  }
+}
