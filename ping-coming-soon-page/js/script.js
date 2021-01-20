@@ -7,6 +7,7 @@ function socialLinkHandler(e) {
 function submitFormHandler(e) {
   e.preventDefault();
   alert('Form submitted succesfully!');
+  e.currentTarget.reset();
 }
 
 function invalidInputHandler(e) {
