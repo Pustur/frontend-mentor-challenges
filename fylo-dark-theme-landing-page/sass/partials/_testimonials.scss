@@ -1,0 +1,77 @@
+.testimonials {
+  margin: 140px 0 0;
+  padding-top: 32px;
+  display: grid;
+  gap: 24px;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-quotes.png);
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__item {
+    background-color: var(--color-bg-testimonials);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &__quote {
+    margin: 0;
+  }
+
+  &__text {
+    margin-top: 0;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    font-size: 0.6875rem;
+  }
+
+  &__image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  &__author-name {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  &__author-title {
+    font-size: 0.4375rem;
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .testimonials {
+    background-position: 5px 0;
+    background-size: 39px 32px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .testimonials {
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 8px;
+    margin-left: -8px;
+
+    &__wrapper {
+      padding: 0 60px;
+    }
+
+    &__item {
+      padding: 44px 26px 26px;
+    }
+
+    &__text {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

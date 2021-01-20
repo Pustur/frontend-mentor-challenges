@@ -1,0 +1,38 @@
+.section-collab {
+  display: grid;
+  gap: 56px;
+  margin-top: 160px;
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .section-collab {
+    &__title {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .section-collab {
+    margin-top: 140px;
+    align-items: center;
+    grid-template-columns: 1fr 36em;
+    font-size: 1rem;
+
+    &__image {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
+    }
+  }
+}

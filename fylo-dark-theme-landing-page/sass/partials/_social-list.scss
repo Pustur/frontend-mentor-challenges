@@ -1,0 +1,39 @@
+.social-list {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    & + & {
+      margin-left: 12px;
+    }
+  }
+
+  svg {
+    width: 50%;
+    fill: currentColor;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    transition: border-color 0.3s, color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: var(--color-cyan);
+      outline: none;
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .social-list {
+    justify-content: flex-end;
+  }
+}

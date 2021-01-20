@@ -133,6 +133,13 @@ const projects = [
     description:
       'This challenge will get you thinking about building an accessible custom toggle control and also test your layout skills.',
   },
+  {
+    name: 'Fylo dark theme landing page',
+    slug: 'fylo-dark-theme-landing-page',
+    tags: ['html', 'css'],
+    description:
+      'This design has some nice layout challenges in it. A perfect training ground to practice your Flexbox and/or Grid skills.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.map(projectToHtml).join('');

@@ -1,0 +1,35 @@
+.features {
+  margin: 0;
+  display: grid;
+  gap: 88px;
+
+  &__item {
+    > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.3rem;
+  }
+
+  &__text {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px 152px;
+
+    &__item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

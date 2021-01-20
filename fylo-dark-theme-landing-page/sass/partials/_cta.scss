@@ -1,0 +1,23 @@
+.cta {
+  color: var(--color-cyan);
+  border-bottom: 1px solid currentColor;
+  padding: 6px 0;
+  display: inline-block;
+  transition: color 0.3s, border-color 0.3s;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icon-arrow.svg);
+    margin-left: 8px;
+    padding-top: 4px;
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
+}

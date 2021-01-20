@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--color-bg-main);
+  color: white;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: (21 / 14);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2,
+h3 {
+  font-size: 1.125rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input[type='email'],
+input[type='submit'] {
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input[type='email'] {
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+  padding: 0 2.5rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: $media-md-min) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}

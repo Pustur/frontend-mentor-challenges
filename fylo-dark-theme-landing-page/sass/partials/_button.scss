@@ -1,0 +1,36 @@
+.button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 999px;
+  padding: 0 2em;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-cyan);
+  background-image: linear-gradient(
+    to right,
+    var(--color-cyan),
+    var(--color-blue)
+  );
+
+  &:hover,
+  &:focus {
+    background-image: none;
+  }
+
+  @at-root a#{&} {
+    font-size: 1rem;
+    min-width: 280px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .button {
+    @at-root a#{&} {
+      height: 56px;
+      line-height: 56px;
+    }
+  }
+}
