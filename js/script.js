@@ -142,7 +142,7 @@ const projects = [
   },
 ];
 const projectsList = document.querySelector('.js-projects-list');
-const projectsHtml = projects.map(projectToHtml).join('');
+const projectsHtml = projects.reverse().map(projectToHtml).join('');
 
 // Init
 projectsList.innerHTML = projectsHtml;
