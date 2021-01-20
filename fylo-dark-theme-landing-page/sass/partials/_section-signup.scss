@@ -1,0 +1,29 @@
+.section-signup {
+  background-color: var(--color-bg-intro);
+  padding: 38px 28px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  margin-top: var(--size-section-signup-margin-top);
+  margin-bottom: calc(var(--size-section-signup-offset) * -1);
+  position: relative;
+
+  &__top {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.6em;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .section-signup {
+    padding: 40px 76px;
+
+    &__top {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

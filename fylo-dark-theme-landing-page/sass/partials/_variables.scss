@@ -1,0 +1,26 @@
+$media-sm-max: 1023px;
+$media-md-min: 1024px;
+
+:root {
+  --color-bg-intro: hsl(217, 28%, 15%);
+  --color-bg-main: hsl(218, 28%, 13%);
+  --color-bg-footer: hsl(216, 53%, 9%);
+  --color-bg-testimonials: hsl(219, 30%, 18%);
+  --color-cyan: hsl(176, 68%, 64%);
+  --color-blue: hsl(198, 60%, 50%);
+  --color-error: hsl(0, 100%, 63%);
+
+  --size-section-signup-margin-top: 160px;
+  --size-section-signup-offset: 150px;
+  --size-footer-padding-top: 72px;
+  --size-footer-padding-bottom: 44px;
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-section-signup-margin-top: 200px;
+    --size-section-signup-offset: 116px;
+    --size-footer-padding-top: 84px;
+    --size-footer-padding-bottom: 96px;
+  }
+}

@@ -1,0 +1,36 @@
+.contact-list {
+  display: grid;
+  gap: 1rem;
+
+  &__item {
+    background-repeat: no-repeat;
+    padding-left: 32px;
+
+    @each $type in 'location', 'phone', 'email' {
+      &--#{$type} {
+        background-image: url(../images/icon-#{$type}.svg);
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .contact-list {
+    gap: 1.5rem 100px;
+    grid-template-columns: 2.1fr 1fr;
+    grid-template-rows: max-content;
+
+    &__item {
+      padding-left: 40px;
+
+      &:first-child {
+        grid-row: 1 / 3;
+      }
+
+      & + & {
+        grid-column: 2;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
