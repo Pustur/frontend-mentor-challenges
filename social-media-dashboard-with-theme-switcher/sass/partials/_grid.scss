@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  gap: 24px;
+
+  &--overview {
+    gap: 16px;
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 30px;
+  }
+}
+
+@media (min-width: $media-lg-min) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
