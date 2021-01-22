@@ -1,0 +1,35 @@
+$media-sm-max: 659px;
+$media-md-min: 660px;
+$media-md-max: 1023px;
+$media-lg-min: 1024px;
+
+:root {
+  --color-positive: hsl(163, 72%, 41%);
+  --color-negative: hsl(356, 69%, 56%);
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-youtube: hsl(348, 97%, 39%);
+  --color-toggle-unchecked: hsl(230, 22%, 74%);
+  --color-toggle-thumb-unchecked: hsl(227, 47%, 96%);
+  --color-toggle-thumb-checked: hsl(228, 28%, 20%);
+
+  --size-offset: 45px;
+  --size-container-padding: 25px;
+  --size-toggle-thumb: 18px;
+  --size-toggle-padding: 3px;
+  --size-toggle-label-padding: 13px;
+  --size-toggle-space-inside: 6px;
+  --size-toggle-width: calc(
+    var(--size-toggle-thumb) * 2 + var(--size-toggle-padding) * 2 +
+      var(--size-toggle-space-inside)
+  );
+  --size-toggle-height: calc(
+    var(--size-toggle-thumb) + var(--size-toggle-padding) * 2
+  );
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-offset: 107px;
+  }
+}

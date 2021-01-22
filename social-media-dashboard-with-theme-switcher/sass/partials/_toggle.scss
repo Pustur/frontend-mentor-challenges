@@ -1,0 +1,99 @@
+.toggle {
+  display: inline-flex;
+
+  &:focus-within {
+    .toggle__label {
+      &::before {
+        outline: 1px dotted #212121;
+        outline: 5px auto Highlight;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+
+  &__input {
+    + .toggle__label {
+      padding-right: calc(
+        var(--size-toggle-width) + var(--size-toggle-label-padding)
+      );
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 99px;
+      }
+
+      &::before {
+        top: 50%;
+        right: 0;
+        height: var(--size-toggle-height);
+        width: var(--size-toggle-width);
+        padding: var(--size-toggle-padding);
+        background-color: var(--color-toggle-unchecked);
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        top: calc(50%);
+        right: var(--size-toggle-padding);
+        height: var(--size-toggle-thumb);
+        width: var(--size-toggle-thumb);
+        background-color: var(--color-toggle-thumb-unchecked);
+        transform: translateX(0) translateY(-50%);
+        transition: transform 0.3s, background-color 0.3s;
+      }
+
+      &:hover {
+        &::before {
+          background-image: linear-gradient(
+            45deg,
+            hsl(210, 78%, 56%),
+            hsl(146, 68%, 55%)
+          );
+        }
+      }
+    }
+
+    &:checked {
+      + .toggle__label {
+        &::before {
+          background-image: linear-gradient(
+            45deg,
+            hsl(210, 78%, 56%),
+            hsl(146, 68%, 55%)
+          );
+        }
+
+        &::after {
+          background-color: var(--color-toggle-thumb-checked);
+          transform: translateX(calc(-100% - var(--size-toggle-space-inside)))
+            translateY(-50%);
+        }
+
+        &:hover {
+          &::after {
+            background-color: var(--color-bg-card-hover);
+          }
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding: 6px var(--size-toggle-label-padding) 6px 0;
+    color: var(--color-muted);
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .toggle {
+    &,
+    &__label {
+      width: 100%;
+    }
+  }
+}

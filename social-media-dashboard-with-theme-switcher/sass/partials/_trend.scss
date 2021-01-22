@@ -1,0 +1,26 @@
+.trend {
+  color: var(--color-negative);
+  font-weight: bold;
+  font-size: 0.75rem;
+
+  &__arrow {
+    display: inline-block;
+    overflow: hidden;
+    width: 8px;
+    height: 4px;
+    background-color: currentColor;
+    text-indent: -999%;
+    vertical-align: middle;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    margin-top: -1px;
+    margin-right: 1px;
+  }
+
+  &--positive {
+    color: var(--color-positive);
+
+    .trend__arrow {
+      transform: rotate(180deg);
+    }
+  }
+}

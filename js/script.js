@@ -140,6 +140,13 @@ const projects = [
     description:
       'This design has some nice layout challenges in it. A perfect training ground to practice your Flexbox and/or Grid skills.',
   },
+  {
+    name: 'Social media dashboard with theme switcher',
+    slug: 'social-media-dashboard-with-theme-switcher',
+    tags: ['html', 'css', 'js'],
+    description:
+      'This challenge will be a perfect chance to practice your Grid skills. The color theme switcher also adds a nice additional test.',
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.reverse().map(projectToHtml).join('');

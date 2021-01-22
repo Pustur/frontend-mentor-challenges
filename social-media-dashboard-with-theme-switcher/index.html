@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+    <script>
+      window.COLORS = {
+        dark: {
+          'bg': '#1D2029',
+          'bg-header': '#20222F',
+          'bg-card': 'hsl(228, 28%, 20%)',
+          'bg-card-hover': 'hsl(226, 25%, 27%)',
+          'muted': 'hsl(228, 34%, 66%)',
+          'foreground': 'white',
+          'border': 'hsl(235, 17%, 26%)',
+        },
+        light: {
+          'bg': 'hsl(0, 0%, 100%)',
+          'bg-header': 'hsl(225, 100%, 98%)',
+          'bg-card': 'hsl(227, 47%, 96%)',
+          'bg-card-hover': 'hsl(232, 33%, 91%)',
+          'muted': 'hsl(228, 12%, 44%)',
+          'foreground': 'hsl(230, 17%, 14%)',
+          'border': 'hsl(231, 9%, 57%)',
+        },
+      };
+
+      (() => {
+        function getInitialTheme() {
+          const persistedTheme = localStorage.getItem('theme');
+          const hasPersistedPreference = typeof persistedTheme === 'string';
+
+          if (hasPersistedPreference) return persistedTheme;
+
+          const mq = matchMedia('(prefers-color-scheme: dark)');
+          const hasMediaQueryPreference = typeof mq.matches === 'boolean';
+
+          if (hasMediaQueryPreference) return mq.matches ? 'dark' : 'light';
+
+          return 'dark';
+        }
+
+        const theme = getInitialTheme();
+        const root = document.documentElement;
+
+        root.style.setProperty('--theme', theme);
+
+        Object.entries(window.COLORS.dark).forEach(([name, color]) => {
+          root.style.setProperty(`--color-${name}`, window.COLORS[theme][name]);
+        });
+      })();
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__text">
+            <h1>Social Media Dashboard</h1>
+            <p class="header__subtitle">Total Followers: 23,004</p>
+          </div>
+
+          <div class="toggle">
+            <input id="theme" class="toggle__input sr-only" type="checkbox" />
+            <label class="toggle__label" for="theme">Dark Mode</label>
+          </div>
+        </div>
+      </header>
+
+      <div class="container content">
+        <section>
+          <h2 class="sr-only">Current statistics</h2>
+
+          <ul class="grid">
+            <li>
+              <a class="card card--current card--facebook" href="#">
+                <h3 class="card__title">
+                  <img src="./images/icon-facebook.svg" alt="Facebook" />
+                  @nathanf
+                </h3>
+                <p>
+                  <span class="card__number">1987</span>
+                  <span class="card__type">Followers</span>
+                </p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  12 Today
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--current card--twitter" href="#">
+                <h3 class="card__title">
+                  <img src="./images/icon-twitter.svg" alt="Twitter" />
+                  @nathanf
+                </h3>
+                <p>
+                  <span class="card__number">1044</span>
+                  <span class="card__type">Followers</span>
+                </p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  99 Today
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--current card--instagram" href="#">
+                <h3 class="card__title">
+                  <img src="./images/icon-instagram.svg" alt="Instagram" />
+                  @realnathanf
+                </h3>
+                <p>
+                  <span class="card__number">11k</span>
+                  <span class="card__type">Followers</span>
+                </p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  1099 Today
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--current card--youtube" href="#">
+                <h3 class="card__title">
+                  <img src="./images/icon-youtube.svg" alt="YouTube" />
+                  Nathan F.
+                </h3>
+                <p>
+                  <span class="card__number">8239</span>
+                  <span class="card__type">Subscribers</span>
+                </p>
+                <p class="trend">
+                  <span class="trend__arrow">-</span>
+                  144 Today
+                </p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Overview - Today</h2>
+
+          <ul class="grid grid--overview">
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">Facebook</span>
+                  Page Views
+                </h3>
+                <img src="./images/icon-facebook.svg" alt="" />
+                <p class="card__number">87</p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  3%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">Facebook</span>
+                  Likes
+                </h3>
+                <img src="./images/icon-facebook.svg" alt="" />
+                <p class="card__number">52</p>
+                <p class="trend">
+                  <span class="trend__arrow">-</span>
+                  2%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">Instagram</span>
+                  Likes
+                </h3>
+                <img src="./images/icon-instagram.svg" alt="" />
+                <p class="card__number">5462</p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  2257%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">Instagram</span>
+                  Profile Views
+                </h3>
+                <img src="./images/icon-instagram.svg" alt="" />
+                <p class="card__number">52k</p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  1375%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">Twitter</span>
+                  Retweets
+                </h3>
+                <img src="./images/icon-twitter.svg" alt="" />
+                <p class="card__number">117</p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  303%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">Twitter</span>
+                  Likes
+                </h3>
+                <img src="./images/icon-twitter.svg" alt="" />
+                <p class="card__number">507</p>
+                <p class="trend trend--positive">
+                  <span class="trend__arrow">+</span>
+                  553%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">YouTube</span>
+                  Likes
+                </h3>
+                <img src="./images/icon-youtube.svg" alt="" />
+                <p class="card__number">107</p>
+                <p class="trend">
+                  <span class="trend__arrow">-</span>
+                  19%
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class="card card--overview" href="#">
+                <h3 class="card__title">
+                  <span class="sr-only">YouTube</span>
+                  Total Views
+                </h3>
+                <img src="./images/icon-youtube.svg" alt="" />
+                <p class="card__number">1407</p>
+                <p class="trend">
+                  <span class="trend__arrow">-</span>
+                  12%
+                </p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

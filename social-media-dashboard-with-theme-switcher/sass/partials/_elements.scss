@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-size: 0.875rem;
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  padding-bottom: 75px;
+}
+
+h2 {
+  margin-top: 46px;
+  margin-bottom: 24px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: inherit;
+}
+
+@media (min-width: $media-md-min) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
