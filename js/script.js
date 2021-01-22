@@ -147,6 +147,13 @@ const projects = [
     description:
       'This challenge will be a perfect chance to practice your Grid skills. The color theme switcher also adds a nice additional test.',
   },
+  {
+    name: 'Interactive pricing component',
+    slug: 'interactive-pricing-component',
+    tags: ['html', 'css', 'js'],
+    description:
+      "In this project, you'll build out an interactive pricing component complete with custom range input slider and pricing toggle. A perfect way to test your JS skills!",
+  },
 ];
 const projectsList = document.querySelector('.js-projects-list');
 const projectsHtml = projects.reverse().map(projectToHtml).join('');
