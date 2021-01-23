@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+
+  <body>
+    <main>
+      <header class="header">
+        <div class="header__container">
+          <h1>Simple, traffic-based pricing</h1>
+          <p class="header__subtitle">
+            Sign-up for our 30-day trial. No credit card required.
+          </p>
+        </div>
+      </header>
+
+      <div class="container">
+        <form class="card">
+          <div class="card__top">
+            <p class="card__pageviews">
+              <span class="card__pageviews-number js-pageviews">100</span>
+              Pageviews
+            </p>
+            <p class="card__price">
+              <span class="card__price-number js-price">16.00</span>
+              <span class="card__period js-period">month</span>
+            </p>
+            <input
+              type="range"
+              name="pageviews"
+              min="10000"
+              max="190000"
+              step="10000"
+              value="100000"
+            />
+          </div>
+
+          <div class="toggle">
+            <input
+              id="monthly"
+              class="toggle__input sr-only"
+              value="monthly"
+              name="payment-frequency"
+              type="radio"
+              checked
+            />
+            <label class="toggle__label" for="monthly">Monthly Billing</label>
+            <input
+              id="yearly"
+              class="toggle__input sr-only"
+              value="yearly"
+              name="payment-frequency"
+              type="radio"
+            />
+            <label class="toggle__label" for="yearly">
+              Yearly Billing
+              <!-- prettier-ignore -->
+              <span class="label">
+                <span class="label__sign">-</span>25%
+                <span class="label__discount">discount</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="card__bottom">
+            <ul class="features-list">
+              <li class="features-list__item">Unlimited websites</li>
+              <li class="features-list__item">100% data ownership</li>
+              <li class="features-list__item">Email reports</li>
+            </ul>
+
+            <input class="button" type="submit" value="Start my trial" />
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

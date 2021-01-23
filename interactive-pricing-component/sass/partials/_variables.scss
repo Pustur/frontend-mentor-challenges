@@ -1,0 +1,39 @@
+$media-sm-max: 1023px;
+$media-md-min: 1024px;
+
+:root {
+  --color-bg: #f1f5fe;
+  --color-range-empty: hsl(224, 65%, 95%);
+  --color-range-full: hsl(174, 77%, 80%);
+  --color-range-thumb: hsl(174, 86%, 45%);
+  --color-range-thumb-focused: #25aea0;
+  --color-label-bg: hsl(14, 92%, 95%);
+  --color-label-foreground: hsl(15, 100%, 70%);
+  --color-notblack: hsl(227, 35%, 25%);
+  --color-muted: hsl(226, 100%, 87%);
+  --color-foreground: hsl(225, 20%, 60%);
+  --color-toggle-bg: hsl(223, 50%, 87%);
+
+  --size-offset: 166px;
+  --size-icon-check-width: 9px;
+  --size-features-bullet-spacing: 16px;
+  --size-range-thumb: 40px;
+  --size-range-track-height: 8px;
+  --size-toggle-thumb: 14px;
+  --size-toggle-padding: 4px;
+  --size-toggle-spacing: 7px;
+  --size-toggle-label-padding: 1rem;
+  --size-toggle-width: calc(
+    var(--size-toggle-thumb) * 2 + var(--size-toggle-padding) * 2 +
+      var(--size-toggle-spacing)
+  );
+  --size-toggle-height: calc(
+    var(--size-toggle-thumb) + var(--size-toggle-padding) * 2
+  );
+}
+
+@media (min-width: $media-md-min) {
+  :root {
+    --size-offset: 183px;
+  }
+}

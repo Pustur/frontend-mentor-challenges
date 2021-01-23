@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: (46 / 26);
+  color: var(--color-foreground);
+  padding-bottom: 88px;
+}
+
+h1 {
+  color: var(--color-notblack);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+@media (min-width: $media-md-min) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
