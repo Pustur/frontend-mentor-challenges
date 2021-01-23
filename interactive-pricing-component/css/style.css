@@ -165,7 +165,8 @@ h1 {
   appearance: none;
   border-radius: 99px;
   font-weight: 800;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  font-family: inherit;
   text-align: center;
   height: 40px;
   line-height: 40px;
