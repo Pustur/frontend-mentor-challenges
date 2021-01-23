@@ -1,0 +1,99 @@
+.toggle {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+
+  &:focus-within {
+    .toggle__label {
+      &::before {
+        outline: 1px dotted #212121;
+        outline: 5px auto Highlight;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+
+  &__input {
+    &:first-of-type {
+      + .toggle__label {
+        padding-right: calc(
+          var(--size-toggle-width) + var(--size-toggle-label-padding)
+        );
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          border-radius: 999px;
+        }
+
+        &::before {
+          top: 50%;
+          right: 0;
+          width: var(--size-toggle-width);
+          height: var(--size-toggle-height);
+          padding: var(--size-toggle-padding);
+          background-color: var(--color-toggle-bg);
+          transform: translateY(-50%);
+        }
+
+        &::after {
+          top: 50%;
+          right: var(--size-toggle-padding);
+          width: var(--size-toggle-thumb);
+          height: var(--size-toggle-thumb);
+          background-color: white;
+          transform: translateX(0) translateY(-50%);
+          transition: transform 0.3s;
+        }
+      }
+
+      &:checked {
+        + .toggle__label {
+          &::after {
+            transform: translateX(calc(-100% - var(--size-toggle-spacing)))
+              translateY(-50%);
+          }
+        }
+      }
+    }
+
+    &:last-of-type {
+      + .toggle__label {
+        padding-left: calc(
+          var(--size-toggle-width) + var(--size-toggle-label-padding)
+        );
+        margin-left: calc((var(--size-toggle-width)) * -1);
+      }
+    }
+
+    &:not(:checked) {
+      + .toggle__label {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    padding: 6px var(--size-toggle-label-padding) 7px;
+  }
+
+  &:hover,
+  &:focus-within {
+    .toggle__label {
+      &::before {
+        background-color: var(--color-range-thumb);
+      }
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .toggle {
+    margin-top: 2rem;
+  }
+}

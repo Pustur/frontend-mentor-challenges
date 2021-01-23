@@ -1,0 +1,25 @@
+.label {
+  background-color: var(--color-label-bg);
+  color: var(--color-label-foreground);
+  border-radius: 99px;
+  font-size: 0.625rem;
+  padding: 2px 0.6em 3px;
+  font-weight: 800;
+  margin-left: 0.5em;
+}
+
+@media (max-width: $media-sm-max) {
+  .label {
+    &__discount {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .label {
+    &__sign {
+      display: none;
+    }
+  }
+}

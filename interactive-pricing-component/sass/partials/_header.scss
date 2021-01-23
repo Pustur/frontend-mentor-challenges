@@ -1,0 +1,43 @@
+.header {
+  text-align: center;
+  padding-top: 57px;
+  padding-bottom: calc(31px + var(--size-offset));
+  background-color: var(--color-bg);
+  border-bottom-left-radius: 190px;
+
+  &__container {
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/pattern-circles.svg);
+
+    > * {
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (max-width: $media-sm-max) {
+  .header {
+    &__subtitle {
+      font-size: 0.8125rem;
+      max-width: 22ch;
+    }
+  }
+}
+
+@media (min-width: $media-md-min) {
+  .header {
+    padding-top: 67px;
+    padding-bottom: calc(53px + var(--size-offset));
+  }
+}
