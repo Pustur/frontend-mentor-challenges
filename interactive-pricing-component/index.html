@@ -39,14 +39,18 @@
               <span class="card__price-number js-price">16.00</span>
               <span class="card__period js-period">month</span>
             </p>
-            <input
-              type="range"
-              name="pageviews"
-              min="10000"
-              max="190000"
-              step="10000"
-              value="100000"
-            />
+            <div>
+              <label class="sr-only" for="range">Pageviews amount</label>
+              <input
+                id="range"
+                type="range"
+                name="pageviews"
+                min="10000"
+                max="190000"
+                step="10000"
+                value="100000"
+              />
+            </div>
           </div>
 
           <div class="toggle">
